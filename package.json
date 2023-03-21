@@ -75,7 +75,7 @@
     "@oclif/core": "^2.6.3",
     "cli-table3": "0.6.3",
     "lodash": "^4.17.21",
-    "open": "^8.4.2",
+    "open": "^9.0.0",
     "tslib": "^2.5.0"
   },
   "publishConfig": {
