@@ -1,12 +1,10 @@
-import { expect, test } from '@oclif/test'
+import { runCommand } from '@oclif/test'
+import { expect } from 'chai'
+
 
 describe('webhooks:reset', () => {
-  test
-    .timeout(5000)
-    .stdout()
-    .command(['webhooks:noc'])
-    .it('runs NoC', ctx => {
-      expect(ctx.stdout).to.contain('-= NoC =-')
-    })
-
+  it('runs NoC', async () => {
+    const { stdout } = await runCommand<{ name: string }>(['webhooks:noc'])
+    expect(stdout).to.contain('-= NoC =-')
+  }).timeout(5000)
 })

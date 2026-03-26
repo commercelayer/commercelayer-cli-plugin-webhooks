@@ -7,7 +7,7 @@
   "repository": "commercelayer/commercelayer-cli-plugin-webhooks",
   "bugs": "https://github.com/commercelayer/commercelayer-cli-plugin-webhooks/issues",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "files": [
     "/bin/run.*",
@@ -50,17 +50,18 @@
     "readme": "cl-cli-dev readme --plugin --bin=commercelayer && git add README.md",
     "lint": "biome check --enforce-assist=true",
     "check": "biome check --enforce-assist=true --write",
-    "release": "pnpm upgrade && pnpm lint && pnpm prepack && pnpm postpack"
+    "release": "pnpm upgrade && pnpm prepack && pnpm postpack && pnpm test"
   },
   "types": "lib/index.d.ts",
   "devDependencies": {
-    "@biomejs/biome": "2.4.8",
-    "@commercelayer/cli-dev": "^3.0.13",
+    "@biomejs/biome": "^2.4.9",
+    "@commercelayer/cli-dev": "oclif4",
     "@oclif/plugin-help": "^6.2.40",
-    "@oclif/test": "^3.2.15",
+    "@oclif/test": "^4.1.17",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/chai": "^5.2.3",
+    "@types/cli-progress": "^3.11.6",
     "@types/lodash.isempty": "^4.4.9",
     "@types/mocha": "^10.0.10",
     "@types/node": "^25.5.0",
@@ -73,10 +74,10 @@
     "typescript": "^6.0.2"
   },
   "dependencies": {
-    "@commercelayer/cli-core": "^5.10.8",
-    "@commercelayer/cli-ux": "^1.1.0",
+    "@commercelayer/cli-core": "oclif4",
+    "@commercelayer/cli-ux": "oclif4",
     "@commercelayer/sdk": "^6.55.0",
-    "@oclif/core": "^3.27.0",
+    "@oclif/core": "^4.10.3",
     "cli-table3": "^0.6.5",
     "lodash.isempty": "^4.4.0",
     "open": "^8.4.2",

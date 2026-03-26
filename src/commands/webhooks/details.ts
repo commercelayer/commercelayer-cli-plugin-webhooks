@@ -1,6 +1,5 @@
 import { clColor, clOutput } from '@commercelayer/cli-core'
 import type { QueryParamsRetrieve } from '@commercelayer/sdk'
-import type { CommandError } from '@oclif/core/lib/interfaces'
 import Table from 'cli-table3'
 import isEmpty from 'lodash.isempty'
 import { BaseIdCommand, Flags } from '../../base'
@@ -82,7 +81,7 @@ export default class WebhooksDetails extends BaseIdCommand {
       return webhook
 
     } catch (error) {
-      this.handleError(error as CommandError, flags, id)
+      this.handleError(error, flags, id)
     }
 
   }
