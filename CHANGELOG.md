@@ -1,3 +1,15 @@
+# [5.0.0-oclif4.1](https://github.com/commercelayer/commercelayer-cli-plugin-webhooks/compare/v4.3.1...v5.0.0-oclif4.1) (2026-03-26)
+
+
+### Features
+
+* upgrade to oclif core v4 ([fb6926f](https://github.com/commercelayer/commercelayer-cli-plugin-webhooks/commit/fb6926fe3cb819e30c336d51b8c308f1e80abe37))
+
+
+### BREAKING CHANGES
+
+* upgrade to oclif core v4 and node v22
+
 ## [4.3.1](https://github.com/commercelayer/commercelayer-cli-plugin-webhooks/compare/v4.3.0...v4.3.1) (2026-03-24)
 
 
