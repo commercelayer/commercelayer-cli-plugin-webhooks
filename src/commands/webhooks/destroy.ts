@@ -1,5 +1,4 @@
 import { clColor } from '@commercelayer/cli-core'
-import type { CommandError } from '@oclif/core/lib/interfaces'
 import { BaseIdCommand } from '../../base'
 
 
@@ -30,7 +29,7 @@ export default class WebhooksDestroy extends BaseIdCommand {
 
 		cl.webhooks.delete(id)
 			.then(() => { this.log(`\n${clColor.msg.success.greenBright('Successfully')} destroyed webhook with id ${clColor.api.id(id)}\n`) })
-			.catch(error => { this.handleError(error as CommandError, flags, id) })
+			.catch(error => { this.handleError(error, flags, id) })
 
 	}
 

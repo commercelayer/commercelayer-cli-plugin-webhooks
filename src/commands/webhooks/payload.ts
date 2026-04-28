@@ -1,5 +1,4 @@
 import { clColor, clOutput } from '@commercelayer/cli-core'
-import type { CommandError } from '@oclif/core/lib/interfaces'
 import { BaseIdCommand, Flags } from '../../base'
 
 
@@ -54,7 +53,7 @@ export default class WebhooksPayload extends BaseIdCommand {
 			return event
 
 		} catch (error) {
-			this.handleError(error as CommandError, flags, id)
+			this.handleError(error, flags, id)
 		}
 
 	}

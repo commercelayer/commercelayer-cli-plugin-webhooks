@@ -1,5 +1,4 @@
 import { clColor } from '@commercelayer/cli-core'
-import type { CommandError } from '@oclif/core/lib/interfaces'
 import { BaseIdCommand } from '../../base'
 
 
@@ -30,7 +29,7 @@ export default class WebhooksReset extends BaseIdCommand {
 
     cl.webhooks.update({ id, _reset_circuit: true })
       .then(() => { this.log(`\nThe circuit breaker associated to the webhook ${clColor.api.id(id)} has been ${clColor.msg.success('successfully')} reset\n`) })
-      .catch(error => { this.handleError(error as CommandError, flags, id) })
+      .catch(error => { this.handleError(error, flags, id) })
 
   }
 
